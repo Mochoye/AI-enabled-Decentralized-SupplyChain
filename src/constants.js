@@ -1,1 +1,1 @@
-export const DB_NAME = "supply_chain_db"
+export const DB_NAME = "appBackend"

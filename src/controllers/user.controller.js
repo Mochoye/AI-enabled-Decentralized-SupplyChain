@@ -5,25 +5,10 @@ import { User } from "../models/user.model.js";
 import { apiResponse } from "../utils/apiResponse.js";
 
 const registerUser = asyncHandler(async (req, res) => {
-  // 0----- STEPS -----0
-
-  // 1. get user details from Frontend
-  // 2. validation - not empty
-  // 3. check if user already exists
-  // 4. check for images, check for avatar
-  // 5. uload to cloudinary, avatar uploaded?
-  // 6. create user object - db entry
-  // 7. remove password and referesh token field from resposne
-  // 8. check for user creation
-  // 9. return response
+  
 
   //1
   const { username, fullName, email, password } = req.body;
-
-  //2
-  // if (fullName === "") {
-  //   throw new apiError(400, "fullname is required");
-  // }
 
   if (
     [fullName, email, username, password].some((field) => field?.trim() === "")
@@ -49,7 +34,8 @@ const registerUser = asyncHandler(async (req, res) => {
   // if (!avatarLocalPath) {
   //   throw new apiError(400, "Avatar file is required");
   // }
-  // //5
+  
+  //5
   // const avatar = await cloudinaryUpload(avatarLocalPath);
 
   // if (!avatar) {
